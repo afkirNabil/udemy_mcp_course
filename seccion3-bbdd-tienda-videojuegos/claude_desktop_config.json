@@ -1,0 +1,43 @@
+{
+  "preferences": {
+    "legacyQuickEntryEnabled": true
+  },
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "C:\\Users\\NabilAS\\Downloads",
+        "C:\\Users\\NabilAS\\Desktop"
+      ]
+    },
+    "memory": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+        ],
+      "env": {
+        "MEMORY_DB_PATH": "C:\\Users\\NabilAS\\AppData\\Roaming\\Claude\\memory.sqlite"
+      }
+    },
+    "sqlite": {
+      "command": "uvx",
+      "args": [
+        "mcp-server-sqlite",
+        "--db-path",
+        "C:\\Users\\NabilAS\\udemy\\mcp\\seccion3-bbdd-tienda-videojuegos\\tienda_videojuegos.db"
+      ]
+    },
+    "DBVideogamesStore": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "C:\\Users\\NabilAS\\udemy\\mcp\\seccion3-bbdd-tienda-videojuegos",
+        "run",
+        "mcp_server.py"
+      ]
+    }
+  }
+}
